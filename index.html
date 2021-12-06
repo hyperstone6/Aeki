@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./icons/favicon.ico" type="image/x-icon" />
+    <title>Furniture Store</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer>
+      $(document).ready(function () {
+        $("#footer").load("footer.html");
+      });
+    </script>
+    <script defer type="module" src="./script.js"></script>
+    <!-- <script defer src="./javascript/axios.js"></script> -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__top-content">
+          <nav class="nav">
+            <div class="logo-box">
+              <a href="#" class="logo"
+                ><img src="./icons/logo.png" alt="logo image"
+              /></a>
+            </div>
+            <ul class="nav__list">
+              <li class="nav__link">
+                <a href="/">Products</a>
+                <ul class="nav__sub-list">
+                  <li class="nav__sub-link">
+                    <a data-product href="/">Bedding & Bath</a>
+                  </li>
+                  <li class="nav__sub-link">
+                    <a data-product href="/">Cabinets</a>
+                  </li>
+                  <li class="nav__sub-link">
+                    <a data-product href="/">Chairs & Seating</a>
+                  </li>
+                  <li class="nav__sub-link">
+                    <a data-product href="/">Desks & Tables</a>
+                  </li>
+                  <li class="nav__sub-link">
+                    <a data-product href="/">Entertainment Sets</a>
+                  </li>
+                  <li class="nav__sub-link">
+                    <a data-product href="/">Appliances</a>
+                  </li>
+                  <li class="nav__sub-link">
+                    <a data-product href="/">Lighting & Decor</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav__link">
+                <a href="/">Rooms</a>
+                <ul class="nav__sub-list">
+                  <li class="nav__sub-link">
+                    <a data-room href="/">Bedroom</a>
+                  </li>
+                  <li class="nav__sub-link">
+                    <a data-room href="/">Living Room</a>
+                  </li>
+                  <li class="nav__sub-link">
+                    <a data-room href="/">Guest Room</a>
+                  </li>
+                  <li class="nav__sub-link">
+                    <a data-room href="/">Kitchen</a>
+                  </li>
+                  <li class="nav__sub-link">
+                    <a data-room href="/">Bathroom</a>
+                  </li>
+                  <li class="nav__sub-link"><a data-roomhref="/">Patio</a></li>
+                  <li class="nav__sub-link">
+                    <a data-room href="/">Exterior</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__link--2">Inspirations</li>
+            </ul>
+          </nav>
+
+          <form action="/" class="search">
+            <button class="search__button">
+              <img src="./icons/magnify.png" alt="search icon" />
+            </button>
+            <input
+              type="text"
+              class="search__input"
+              placeholder="Example: minimalist chair"
+            />
+          </form>
+
+          <div class="user-nav">
+            <img src="./icons/love.png" alt="like icon" />
+            <img
+                class="cart-icon"
+                src="./icons/shopping-cart.png"
+                alt="shopping cart icon"
+              />
+            <div class="cart">
+              <span class="cart-counter"></span>
+              <div class="cart-contents"> 
+                <div class="products-container">
+                  <div class="product-header">
+                    <h5 class="product-title"></h5>
+                    <h5 class="product-price"></h5>
+
+                    <h5 class="product-quantity"></h5>
+                    <button class="increment-btn">+</button>
+                    <h5 class="total"></h5>
+                  </div>
+                  <div class="products"></div>
+                </div>
+                <button class="clear-cart">Remove all</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero">
+          <button class="hero__close">X</button>
+          <h1 class="hero__header">High-Quality Furniture Just For You</h1>
+          <p class="hero__text">
+            Our furniture is made from selected and best quality materials that
+            are suitable for your dream home
+          </p>
+          <a href="#gallery" class="hero__cta-btn">Shop Now</a>
+        </div>
+
+        <div class="carousel">
+          <div class="carousel__nav">
+            <div class="carousel__nav__buttons">
+              <button
+                class="carousel__nav__btn carousel__nav__btn--current"
+              ></button>
+              <button class="carousel__nav__btn"></button>
+              <button class="carousel__nav__btn"></button>
+              <button class="carousel__nav__btn"></button>
+            </div>
+            <div class="carousel__buttons">
+              <button class="carousel__btn carousel__btn--left"></button>
+              <button class="carousel__btn carousel__btn--right"></button>
+            </div>
+          </div>
+
+          <div class="carousel__img-container">
+            <div class="carousel__slides">
+              <img
+                class="carousel__img current__img"
+                src="./img/photo-1.jpg"
+                alt="carousel image"
+              />
+              <img
+                class="carousel__img"
+                src="./img/photo-2.jpg"
+                alt="carousel image"
+              />
+              <img
+                class="carousel__img"
+                src="./img/photo-3.jpg"
+                alt="carousel image"
+              />
+              <img
+                class="carousel__img"
+                src="./img/photo-4.jpg"
+                alt="carousel image"
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="feature">
+        <div class="feature__item">
+          <div class="feature__item__img">
+            <img src="./icons/trophy.png" alt="trophy icon" />
+          </div>
+          <div class="feature__item__text">
+            <h3 class="feature__item__text--header">High Quality</h3>
+            <p class="feature__item__text--description">
+              Crafted from top materials
+            </p>
+          </div>
+        </div>
+        <div class="feature__item">
+          <div class="feature__item__img">
+            <img src="./icons/guaranteed.png" alt="guarantee icon" />
+          </div>
+          <div class="feature__item__text">
+            <h3 class="feature__item__text--header">Warranty Protection</h3>
+            <p class="feature__item__text--description">Over 2 years</p>
+          </div>
+        </div>
+        <div class="feature__item">
+          <div class="feature__item__img">
+            <img src="./icons/truck.png" alt="shipping icon" />
+          </div>
+          <div class="feature__item__text">
+            <h3 class="feature__item__text--header">Free shipping</h3>
+            <p class="feature__item__text--description">Order over $150</p>
+          </div>
+        </div>
+        <div class="feature__item">
+          <div class="feature__item__img">
+            <img src="./icons/customer-service.png" alt="support icon" />
+          </div>
+          <div class="feature__item__text">
+            <h3 class="feature__item__text--header">24/7 Support</h3>
+            <p class="feature__item__text--description">
+              Dedicated chat Support
+            </p>
+          </div>
+        </div>
+      </div>
+      <section class="main">
+        <div class="main__gallery">
+          <div class="main__gallery__overlay">
+            <div class="main__gallery__item">
+              <img
+                class="main__gallery__image-box"
+                src="./img/gallery/coffee-chair.jpg"
+                alt=""
+              />
+            </div>
+            <div class="main__gallery__info">
+              <h2>Slytherine</h2>
+              <p>Stylish Coffee Chair</p>
+              <h3>$500.00</h3>
+            </div>
+            <button class="cart-button" data-id="123">Add to cart</button>
+          </div>
+          <div class="main__gallery__overlay">
+            <div class="main__gallery__item">
+              <img
+                class="main__gallery__image-box"
+                src="./img/gallery/coffee-table.jpg"
+                alt=""
+              />
+            </div>
+            <div class="main__gallery__info">
+              <h2>Leviosa</h2>
+              <p>Stylish Coffee Table</p>
+              <h3>$120.00</h3>
+            </div>
+            <button class="cart-button" data-id="234">Add to cart</button>
+          </div>
+          <div class="main__gallery__overlay">
+            <div class="main__gallery__item">
+              <img
+                class="main__gallery__image-box"
+                src="./img/gallery/flower-pot.jpg"
+                alt=""
+              />
+            </div>
+            <div class="main__gallery__info">
+              <h2>Potty</h2>
+              <p>Minimalist flower pot</p>
+              <h3>$40.00</h3>
+            </div>
+            <button class="cart-button" data-id="345">Add to cart</button>
+          </div>
+          <div class="main__gallery__overlay">
+            <div class="main__gallery__item">
+              <img
+                class="main__gallery__image-box"
+                src="./img/gallery/mug.jpg"
+                alt=""
+              />
+            </div>
+            <div class="main__gallery__info">
+              <h2>Muggo</h2>
+              <p>Small mug</p>
+              <h3>$7.00</h3>
+            </div>
+            <button class="cart-button" data-id="456">Add to cart</button>
+          </div>
+          <div class="main__gallery__overlay">
+            <div class="main__gallery__item">
+              <img
+                class="main__gallery__image-box"
+                src="./img/gallery/night-light.jpg"
+                alt=""
+              />
+            </div>
+            <div class="main__gallery__info">
+              <h2>Grifo</h2>
+              <p>Night lamp</p>
+              <h3>$50.00</h3>
+            </div>
+            <button class="cart-button" data-id="567">Add to cart</button>
+          </div>
+          <div class="main__gallery__overlay">
+            <div class="main__gallery__item">
+              <img
+                class="main__gallery__image-box"
+                src="./img/gallery/sofa.jpg"
+                alt=""
+              />
+            </div>
+            <div class="main__gallery__info">
+              <h2>Lolito</h2>
+              <p>Luxury large sofa</p>
+              <h3>$700.00</h3>
+            </div>
+            <button class="cart-button" data-id="678">Add to cart</button>
+          </div>
+          <div class="main__gallery__overlay">
+            <div class="main__gallery__item">
+              <img
+                class="main__gallery__image-box"
+                src="./img/gallery/bed-set.jpg"
+                alt=""
+              />
+            </div>
+            <div class="main__gallery__info">
+              <h2>Haugsvar</h2>
+              <p>bed set</p>
+              <h3>$100.00</h3>
+            </div>
+            <button class="cart-button" data-id="789">Add to cart</button>
+          </div>
+          <div class="main__gallery__overlay">
+            <div class="main__gallery__item">
+              <img
+                class="main__gallery__image-box"
+                src="./img/gallery/ceiling-fan.jpg"
+                alt=""
+              />
+            </div>
+            <div class="main__gallery__info">
+              <h2>Respira</h2>
+              <p>Ceiling fan</p>
+              <h3>$100.00</h3>
+            </div>
+            <button class="cart-button" data-id="890">Add to cart</button>
+          </div>
+        </div>
+      </section>
+      <div id="footer"></div>
+    </div>
+  </body>
+</html>

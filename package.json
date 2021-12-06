@@ -1,0 +1,17 @@
+{
+  "type": "module",
+  "name": "furniture-store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass main.scss style.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "jquery": "^3.6.0",
+    "node-sass": "^6.0.1"
+  }
+}
