@@ -29,7 +29,8 @@ body {
 
 .header {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
+  max-height: 60rem;
   position: relative;
   background-image: linear-gradient(
     to right,
@@ -74,6 +75,10 @@ body {
   &__list {
     display: flex;
     gap: 2rem;
+  }
+
+  &__link--2 {
+    padding-right: 1rem;
   }
 
   //Down arrow pseudo-element
@@ -126,6 +131,7 @@ body {
   position: relative;
   flex-grow: 1;
   max-width: 40%;
+  padding-right: 1rem;
 
   &__button {
     background-color: transparent;
@@ -181,33 +187,23 @@ body {
     background-color: white;
     font-size: 2rem;
     transform: translateX(-30rem);
-    
+
     // visibility: hidden;
   }
 
-  &-item {
-
-    & img {
-
-    }
-
-    &__unit, &__count {
-    }
+  &-counter {
+    visibility: hidden;
+    position: absolute;
+    background-color: darkred;
+    padding: 2px 5px;
+    border-radius: 50%;
+    color: white;
+    transform: translate(4rem, -3rem);
   }
 }
 
-
-// .cart-counter {
-//   position: absolute;
-//   background-color: darkred;
-//   padding: 2px 5px;
-//   border-radius: 50%;
-//   color: white;
-//   transform: translate(-2rem, -1rem);
-// }
-
 .hero {
-  width: 35rem;
+  max-width: 35rem;
   background-color: rgba($color: #fff, $alpha: 0.95);
   padding: 4em;
   position: absolute;
@@ -258,7 +254,6 @@ body {
 
 .carousel {
   height: 100%;
-  //   width: 80%;
   position: relative;
   overflow: hidden;
 
@@ -343,16 +338,17 @@ body {
     transition: all 1000ms ease-in-out;
     position: relative;
     height: 100%;
+    display: flex;
+    align-items: center;
   }
 
   &__img {
     height: auto;
     width: 100%;
     max-height: 100%;
-    // max-width: 80%;
     position: absolute;
     object-fit: contain;
-    bottom: 0;
+    
   }
 }
 
@@ -361,6 +357,7 @@ body {
   margin: 3% auto;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 
   &__item {
     display: flex;
@@ -389,10 +386,10 @@ body {
 
 .main {
   &__gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-    // grid-template-rows: repeat(2, 1fr);
-    gap: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
 
     &__overlay {
       align-items: center;
@@ -438,7 +435,7 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: #e89f71;
-        font-family: 'gilroy-light';
+        font-family: "gilroy-light";
         font-size: 1.5rem;
         color: white;
         cursor: pointer;
@@ -459,7 +456,8 @@ body {
       flex-direction: column;
 
       & img {
-        height: 100%;
+        min-width: 100%;
+        min-height: 100%;
         max-height: 50rem;
         object-fit: cover;
       }
@@ -472,22 +470,21 @@ body {
       align-self: flex-start;
       height: 10em;
       padding: 1em 2em;
-      
+
       & h2 {
         font-size: 2rem;
       }
 
       & p {
-        padding-top: .2em;
+        padding-top: 0.2em;
         color: #898989;
         font-size: 1.2rem;
       }
 
       & h3 {
-        padding-top: .5em;
+        padding-top: 0.5em;
         font-size: 1.8rem;
       }
-
     }
   }
 }
@@ -513,5 +510,27 @@ body {
   & p,
   li {
     font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .header__top-content {
+    flex-wrap: wrap;
+  }
+
+  .nav {
+    margin-bottom: 1rem;
+  }
+
+  .search {
+    min-width: 40%;
+    max-width: 63%;
+  }
+
+  .feature {
+    justify-content: space-between;
+    &__item {
+      margin: 1rem 5rem;
+    }
   }
 }
