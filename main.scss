@@ -22,6 +22,22 @@ body {
   font-family: "Gilroy-Light";
 }
 
+.button {
+  background-color: #e89f71;
+  color: white;
+  border: none;
+  transition: transform 200ms;
+}
+
+.button:hover {
+  cursor: pointer;
+  transform: translateY(-1px);
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
 .wrapper {
   width: 90%;
   margin: 0 auto;
@@ -171,24 +187,20 @@ body {
   position: absolute;
   z-index: 1;
   display: flex;
+  z-index: 100;
+
   &-icon {
     cursor: pointer;
-  }
-
-  .product {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
   }
 
   &-contents {
     visibility: hidden;
     background-color: white;
     font-size: 2rem;
-    transform: translateX(-30rem);
-
-    // visibility: hidden;
+    position: absolute;
+    right: -7rem;
+    padding: 1rem;
+    width: 45rem;
   }
 
   &-counter {
@@ -200,6 +212,40 @@ body {
     color: white;
     transform: translate(4rem, -3rem);
   }
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  gap: .5rem;
+  border: 1px solid #e89f71;
+}
+
+.product img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.clear-cart {
+  padding: .5em 1em;
+}
+
+.checkout {
+  padding: .5em 1em;
+}
+
+.cart-btns {
+  padding: .4rem .5rem;
+  margin: 0 1rem;
+}
+
+.cart-total-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
 }
 
 .hero {
@@ -245,10 +291,10 @@ body {
   &__cta-btn {
     display: block;
     background-color: #e89f71;
+    color: white;
     margin-top: 2em;
     padding: 1.5em 3em;
     text-align: center;
-    color: white;
   }
 }
 
@@ -390,6 +436,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 3rem;
+    // position: relative;
 
     &__overlay {
       align-items: center;
@@ -429,11 +476,11 @@ body {
         visibility: visible;
       }
 
-      & button {
+      .cart-button {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -100%);
         background-color: #e89f71;
         font-family: "gilroy-light";
         font-size: 1.5rem;
@@ -487,6 +534,66 @@ body {
       }
     }
   }
+}
+
+.zoom-button {
+  position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        background-color: #898989;
+        font-family: "gilroy-light";
+        font-size: 1.5rem;
+        color: white;
+        cursor: pointer;
+        z-index: 1;
+        border: none;
+        width: 50%;
+        height: 3.5em;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 500ms;
+}
+
+.gallery-modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(34, 60, 80, 0.8);
+  z-index: 110;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: none;
+}
+
+.modal-img-container {
+  z-index: 111;
+  width: auto;
+  height: 60rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+  position: relative;
+  z-index: 112;
+  background-image: url();
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position:center;
+}
+
+.close-modal {
+  position:absolute;
+  top: 1rem;
+  right: 3rem;
+  z-index: 120;
+  border: none;
+  background-color: #3a3a3a;
+  padding: .1em .4em;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
 }
 
 #footer {

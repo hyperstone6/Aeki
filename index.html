@@ -21,6 +21,11 @@
     />
   </head>
   <body>
+    <div class="gallery-modal">
+      <div class="modal-img-container">
+      </div>
+      <button class="close-modal" id="2">X</button>
+    </div>
     <div class="wrapper">
       <header class="header">
         <div class="header__top-content">
@@ -85,7 +90,7 @@
               <li class="nav__link--2">Inspirations</li>
             </ul>
           </nav>
-          
+
           <form action="/" class="search">
             <button class="search__button">
               <img src="./icons/magnify.png" alt="search icon" />
@@ -100,29 +105,28 @@
           <div class="user-nav">
             <img src="./icons/love.png" alt="like icon" />
             <img
-                class="cart-icon"
-                src="./icons/shopping-cart.png"
-                alt="shopping cart icon"
-              />
-            <div class="cart">
-              <span class="cart-counter"></span>
-              <div class="cart-contents"> 
-                <div class="products-container">
-                  <div class="product-header">
-                    <h5 class="product-title"></h5>
-                    <h5 class="product-price"></h5>
-                    <h5 class="product-quantity"></h5>
-                    <h5 class="total"></h5>
+              class="cart-icon active"
+              src="./icons/shopping-cart.png"
+              alt="shopping cart icon"
+            />
+            <div class="cart active">
+              <span class="cart-counter active"></span>
+              <div class="cart-contents active">
+                <div class="product-container active">
+                  <div class="product-header active">
+                    <h5 class="product-title active"></h5>
+                    <h5 class="product-price active"></h5>
+                    <h5 class="product-quantity active"></h5>
+                    <h5 class="total active"></h5>
                   </div>
-                  <div class="products"></div>
+                  <div class="products active"></div>
                 </div>
-                <button class="clear-cart">Remove all</button>
               </div>
             </div>
           </div>
         </div>
-        <div class="hero">
-          <button class="hero__close">X</button>
+        <div class="hero"  onload="console.log('lol')">
+          <button class="hero__close" id="1">X</button>
           <h1 class="hero__header">High-Quality Furniture Just For You</h1>
           <p class="hero__text">
             Our furniture is made from selected and best quality materials that
@@ -231,7 +235,8 @@
               <p>Stylish Coffee Chair</p>
               <h3>$500.00</h3>
             </div>
-            <button class="cart-button" data-id="123">Add to cart</button>
+            <button class="cart-button">Add to cart</button>
+            <button class="zoom-button">Zoom In</button>
           </div>
           <div class="main__gallery__overlay">
             <div class="main__gallery__item">
@@ -246,7 +251,8 @@
               <p>Stylish Coffee Table</p>
               <h3>$120.00</h3>
             </div>
-            <button class="cart-button" data-id="234">Add to cart</button>
+            <button class="cart-button">Add to cart</button>
+            <button class="zoom-button">Zoom In</button>
           </div>
           <div class="main__gallery__overlay">
             <div class="main__gallery__item">
@@ -261,7 +267,8 @@
               <p>Minimalist flower pot</p>
               <h3>$40.00</h3>
             </div>
-            <button class="cart-button" data-id="345">Add to cart</button>
+            <button class="cart-button">Add to cart</button>
+            <button class="zoom-button">Zoom In</button>
           </div>
           <div class="main__gallery__overlay">
             <div class="main__gallery__item">
@@ -276,7 +283,8 @@
               <p>Small mug</p>
               <h3>$7.00</h3>
             </div>
-            <button class="cart-button" data-id="456">Add to cart</button>
+            <button class="cart-button">Add to cart</button>
+            <button class="zoom-button">Zoom In</button>
           </div>
           <div class="main__gallery__overlay">
             <div class="main__gallery__item">
@@ -291,7 +299,8 @@
               <p>Night lamp</p>
               <h3>$50.00</h3>
             </div>
-            <button class="cart-button" data-id="567">Add to cart</button>
+            <button class="cart-button">Add to cart</button>
+            <button class="zoom-button">Zoom In</button>
           </div>
           <div class="main__gallery__overlay">
             <div class="main__gallery__item">
@@ -306,7 +315,8 @@
               <p>Luxury large sofa</p>
               <h3>$700.00</h3>
             </div>
-            <button class="cart-button" data-id="678">Add to cart</button>
+            <button class="cart-button">Add to cart</button>
+            <button class="zoom-button">Zoom In</button>
           </div>
           <div class="main__gallery__overlay">
             <div class="main__gallery__item">
@@ -321,7 +331,8 @@
               <p>bed set</p>
               <h3>$100.00</h3>
             </div>
-            <button class="cart-button" data-id="789">Add to cart</button>
+            <button class="cart-button">Add to cart</button>
+            <button class="zoom-button">Zoom In</button>
           </div>
           <div class="main__gallery__overlay">
             <div class="main__gallery__item">
@@ -336,7 +347,8 @@
               <p>Ceiling fan</p>
               <h3>$100.00</h3>
             </div>
-            <button class="cart-button" data-id="890">Add to cart</button>
+            <button class="cart-button">Add to cart</button>
+            <button class="zoom-button">Zoom In</button>
           </div>
         </div>
       </section>

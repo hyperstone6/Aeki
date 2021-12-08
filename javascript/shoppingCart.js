@@ -45,14 +45,12 @@ let products = [
 ];
 
 let carts = document.querySelectorAll(".cart-button");
-const removeButton = document.querySelector(".clear-cart");
-const productContainer = document.querySelector(".products-container");
+const productContainer = document.querySelector(".product-container");
 const cartCounter = document.querySelector(".cart-counter");
 const cartIcon = document.querySelector(".cart-icon");
 const cartContents = document.querySelector(".cart-contents");
 
-removeButton.addEventListener("click", () => removeAll());
-
+//Click on cart icon to toggle visibility
 cartIcon.addEventListener("click", () => {
   if (cartContents.style.visibility == "hidden") {
     displayCart();
@@ -62,12 +60,24 @@ cartIcon.addEventListener("click", () => {
   }
 });
 
-cartCounter.addEventListener("change", (e)=> {
-  if(e.innerHTML = "") {
-    e.style.display = "none"
+//Function to close cart when clicked on !cart
+function closeCart(e) {
+  let containsActiveClass = false;
+  let reviewNode = e.target;
+  while (reviewNode.nodeName !== 'BODY') {
+    if (reviewNode.classList.contains('active')) {
+      containsActiveClass = true;
+      break;
+    } 
+    reviewNode = reviewNode.parentNode;
+  } 
+  if (containsActiveClass === false) {
+    cartContents.style.visibility = "hidden"
   }
-})
+}
+document.body.addEventListener('click', closeCart, false);
 
+//General cart cleanup function
 export function removeAll(e) {
   cartCounter.textContent = "";
   cartCounter.style.visibility = "hidden"
@@ -79,6 +89,7 @@ export function removeAll(e) {
   }
 }
 
+//Cart items loop
 for (let i = 0; i < carts.length; i++) {
   carts[i].addEventListener("click", () => {
     cartCount(products[i]);
@@ -86,14 +97,16 @@ for (let i = 0; i < carts.length; i++) {
   });
 }
 
+//function to display cart count
 export function onLoadcartCount() {
   let itemsCountInCart = localStorage.getItem("cartCount");
-
   if (itemsCountInCart) {
     document.querySelector(".cart-counter").textContent = itemsCountInCart;
+    cartCounter.style.visibility = "visible"
   }
 }
 
+//Increment or decrement of cart count
 export function cartCount(product, action) {
   let itemsCountInCart = localStorage.getItem("cartCount");
   itemsCountInCart = parseInt(itemsCountInCart);
@@ -112,6 +125,8 @@ export function cartCount(product, action) {
   }
   addItemsToCart(product);
 }
+
+//Adds purchased items to cart & localStorage
 export function addItemsToCart(product) {
   let cartItems = localStorage.getItem("productsInCart");
   cartItems = JSON.parse(cartItems);
@@ -134,6 +149,7 @@ export function addItemsToCart(product) {
   localStorage.setItem("productsInCart", JSON.stringify(cartItems));
 }
 
+//Calculate total cost
 export function totalCost(product, action) {
   let cartCost = localStorage.getItem("totalCost");
 
@@ -148,39 +164,50 @@ export function totalCost(product, action) {
   }
 }
 
+//Display cart items function. Populates all selected items
 export function displayCart() {
   let cartItems = localStorage.getItem("productsInCart");
   cartItems = JSON.parse(cartItems);
-  let productContainer = document.querySelector(".products-container");
+  let productContainer = document.querySelector(".product-container");
   let cartCost = localStorage.getItem("totalCost");
 
   if (cartItems && productContainer) {
     productContainer.innerHTML = "";
     Object.values(cartItems).map((item) => {
       productContainer.innerHTML += `
-      <div class="product">
-        <img src=${item.img}>
-        <span>${item.itemName}</span>
-        <div class="price">$${item.price}</div>
-        <button class="decrement">-</button>
-        <div class="quantity">${item.inCart}</div>
-        <button class="increment">+</button>
-        <div class="total">$${item.inCart * item.price}</div>
-        <button class="delete-button">X</button>
+      <div class="product active">
+        <img src=${item.img} class="active">
+        <span class="active">${item.itemName}</span>
+        <div class="price active">$${item.price}</div>
+        <button class="decrement cart-btns button active">-</button>
+        <div class="quantity active">${item.inCart}</div>
+        <button class="increment cart-btns button active">+</button>
+        <div class="total active">$${item.inCart * item.price}</div>
+        <button class="delete-button cart-btns button active">X</button>
       </div>
     `;
     });
     productContainer.innerHTML += `
-    <div class="cartTotalConainer">
-      <strong class="">$${cartCost}</strong>
+    <div class="cart-total-container active">
+    <button class="clear-cart button active">Remove all</button>
+    <button class="checkout button active">Checkout</button>
+      <strong class="active">Grand Total: $${cartCost}</strong>
     </div> `;
   }
   deleteButtons();
   qtyModify();
 }
 
+//Deletes the selected item from cart
 export function deleteButtons() {
   let deleteButtons = document.querySelectorAll(".delete-button");
+  //The remove-all button
+  //placed inside function to be available on load
+  if(document.querySelector(".clear-cart") != null) {
+    const removeButton = document.querySelector(".clear-cart");
+    removeButton.addEventListener("click", () => removeAll());
+  }
+  //
   let productName;
   let itemsCountInCart = localStorage.getItem("cartCount");
   let cartItems = localStorage.getItem("productsInCart");
@@ -205,6 +232,7 @@ export function deleteButtons() {
   }
 }
 
+//buttons to increase or decrease units from item
 export function qtyModify() {
   let decreaseButtons = document.querySelectorAll(".decrement");
   let increaseButtons = document.querySelectorAll(".increment");
@@ -227,7 +255,6 @@ export function qtyModify() {
       }
     });
   }
-
   for (let i = 0; i < increaseButtons.length; i++) {
     increaseButtons[i].addEventListener("click", () => {
       currentQuantity =
