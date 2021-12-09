@@ -154,6 +154,9 @@ body {
     color: white;
     transform: translate(4rem, -3rem); }
 
+.lang-change:hover {
+  cursor: pointer; }
+
 .product {
   display: flex;
   justify-content: space-between;
@@ -185,7 +188,7 @@ body {
 .hero {
   max-width: 35rem;
   background-color: rgba(255, 255, 255, 0.95);
-  padding: 4em;
+  padding: 3.5em;
   position: absolute;
   z-index: 90;
   top: 18%;
@@ -208,7 +211,7 @@ body {
       background-color: #e89f71;
       color: white; }
   .hero__header {
-    font-size: 3.7rem;
+    font-size: 3.2rem;
     padding-bottom: 0.3em; }
   .hero__text {
     line-height: 1.7;
@@ -480,3 +483,6 @@ body {
     justify-content: space-between; }
     .feature__item {
       margin: 1rem 5rem; } }
+
+.hidden {
+  display: none; }

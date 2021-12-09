@@ -17,3 +17,5 @@ import {
 } from "./javascript/shoppingCart.js";
 //Zoom function
 import { zoomFunc } from "./javascript/zoomFeature.js";
+//Toggle between English and French
+import { toggleLang, keepSelectedLang } from "./javascript/toggleLang.js";

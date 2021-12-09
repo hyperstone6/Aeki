@@ -214,6 +214,10 @@ body {
   }
 }
 
+.lang-change:hover {
+  cursor: pointer;
+}
+
 .product {
   display: flex;
   justify-content: space-between;
@@ -251,7 +255,7 @@ body {
 .hero {
   max-width: 35rem;
   background-color: rgba($color: #fff, $alpha: 0.95);
-  padding: 4em;
+  padding: 3.5em;
   position: absolute;
   z-index: 90;
   top: 18%;
@@ -279,7 +283,7 @@ body {
   }
 
   &__header {
-    font-size: 3.7rem;
+    font-size: 3.2rem;
     padding-bottom: 0.3em;
   }
 
@@ -640,4 +644,8 @@ body {
       margin: 1rem 5rem;
     }
   }
+}
+
+.hidden {
+  display: none;
 }

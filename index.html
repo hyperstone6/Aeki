@@ -22,8 +22,7 @@
   </head>
   <body>
     <div class="gallery-modal">
-      <div class="modal-img-container">
-      </div>
+      <div class="modal-img-container"></div>
       <button class="close-modal" id="2">X</button>
     </div>
     <div class="wrapper">
@@ -37,53 +36,71 @@
             </div>
             <ul class="nav__list">
               <li class="nav__link">
-                <a href="/">Products</a>
+                <a class="en" href="/">Products</a>
+                <a class="fr hidden" href="/">Produits</a>
                 <ul class="nav__sub-list">
                   <li class="nav__sub-link">
-                    <a data-product href="/">Bedding & Bath</a>
+                    <a class="en" data-product href="/">Bedding & Bath</a>
+                    <a class="fr hidden" data-product href="/">Lit & Bain</a>
                   </li>
                   <li class="nav__sub-link">
-                    <a data-product href="/">Cabinets</a>
+                    <a class="en" data-product href="/">Cabinets</a>
+                    <a class="fr hidden" data-product href="/">Armoires</a>
                   </li>
                   <li class="nav__sub-link">
-                    <a data-product href="/">Chairs & Seating</a>
+                    <a class="en" data-product href="/">Chairs & Seating</a>
+                    <a class="fr hidden" data-product href="/">Chaises & Sièges</a>
                   </li>
                   <li class="nav__sub-link">
-                    <a data-product href="/">Desks & Tables</a>
+                    <a class="en" data-product href="/">Desks & Tables</a>
+                    <a class="fr hidden" data-product href="/">Bureaux & Tables</a>
                   </li>
                   <li class="nav__sub-link">
-                    <a data-product href="/">Entertainment Sets</a>
+                    <a class="en" data-product href="/">Television Sets</a>
+                    <a class="fr hidden" data-product href="/">Supports de Télévision</a>
                   </li>
                   <li class="nav__sub-link">
-                    <a data-product href="/">Appliances</a>
+                    <a class="en" data-product href="/">Appliances</a>
+                    <a class="fr hidden" data-product href="/">Électroménagers</a>
                   </li>
                   <li class="nav__sub-link">
-                    <a data-product href="/">Lighting & Decor</a>
+                    <a class="en" data-product href="/">Lighting & Decor</a>
+                    <a class="fr hidden" data-product href="/">Éclairage & Décor</a>
                   </li>
                 </ul>
               </li>
 
               <li class="nav__link">
-                <a href="/">Rooms</a>
+                <a class="en" href="/">Rooms</a>
+                <a class="fr hidden" href="/">Chambres</a>
                 <ul class="nav__sub-list">
                   <li class="nav__sub-link">
-                    <a data-room href="/">Bedroom</a>
+                    <a class="en" data-room href="/">Bedroom</a>
+                    <a class="fr hidden" data-room href="/">Chambre à Coucher</a>
                   </li>
                   <li class="nav__sub-link">
-                    <a data-room href="/">Living Room</a>
+                    <a class="en" data-room href="/">Living Room</a>
+                    <a class="fr hidden" data-room href="/">Salle de Séjour</a>
                   </li>
                   <li class="nav__sub-link">
-                    <a data-room href="/">Guest Room</a>
+                    <a class="en" data-room href="/">Guest Room</a>
+                    <a class="fr hidden" data-room href="/">Chambre d'hôtes</a>
                   </li>
                   <li class="nav__sub-link">
-                    <a data-room href="/">Kitchen</a>
+                    <a class="en" data-room href="/">Kitchen</a>
+                    <a class="fr hidden" data-room href="/">Cuisine</a>
                   </li>
                   <li class="nav__sub-link">
-                    <a data-room href="/">Bathroom</a>
+                    <a class="en" data-room href="/">Bathroom</a>
+                    <a class="fr hidden" data-room href="/">Salle de Bains</a>
                   </li>
-                  <li class="nav__sub-link"><a data-roomhref="/">Patio</a></li>
                   <li class="nav__sub-link">
-                    <a data-room href="/">Exterior</a>
+                    <a class="en" data-roomhref="/">Patio</a>
+                    <a class="fr hidden" data-roomhref="/">Patio</a>
+                  </li>
+                  <li class="nav__sub-link">
+                    <a class="en" data-room href="/">Exterior</a>
+                    <a class="fr hidden" data-room href="/">Extérieur</a>
                   </li>
                 </ul>
               </li>
@@ -103,7 +120,7 @@
           </form>
 
           <div class="user-nav">
-            <img src="./icons/love.png" alt="like icon" />
+            <img class="lang-change" src="./icons/fr.png" alt="like icon" />
             <img
               class="cart-icon active"
               src="./icons/shopping-cart.png"
@@ -125,14 +142,22 @@
             </div>
           </div>
         </div>
-        <div class="hero"  onload="console.log('lol')">
+        <div class="hero" onload="console.log('lol')">
           <button class="hero__close" id="1">X</button>
-          <h1 class="hero__header">High-Quality Furniture Just For You</h1>
-          <p class="hero__text">
+          <h1 class="hero__header en">High-Quality Furniture Just For You</h1>
+          <h1 class="hero__header fr hidden">
+            Des meubles de haute qualité rien que pour vous
+          </h1>
+          <p class="hero__text en">
             Our furniture is made from selected and best quality materials that
             are suitable for your dream home
           </p>
-          <a href="#gallery" class="hero__cta-btn">Shop Now</a>
+          <p class="hero__text fr hidden">
+            Nos meubles sont fabriqués à partir de matériaux sélectionnés et de
+            la meilleure qualité qui conviennent à la maison de vos rêves.
+          </p>
+          <a href="#gallery" class="hero__cta-btn en">Shop Now</a>
+          <a href="#gallery" class="hero__cta-btn fr hidden">Achetez maintenant</a>
         </div>
 
         <div class="carousel">
@@ -184,9 +209,13 @@
             <img src="./icons/trophy.png" alt="trophy icon" />
           </div>
           <div class="feature__item__text">
-            <h3 class="feature__item__text--header">High Quality</h3>
-            <p class="feature__item__text--description">
+            <h3 class="feature__item__text--header en">High Quality</h3>
+            <h3 class="feature__item__text--header fr hidden">Haute Qualité</h3>
+            <p class="feature__item__text--description en">
               Crafted from top materials
+            </p>
+            <p class="feature__item__text--description fr hidden">
+              Fabriqués de matériaux de qualité supérieure
             </p>
           </div>
         </div>
@@ -195,8 +224,10 @@
             <img src="./icons/guaranteed.png" alt="guarantee icon" />
           </div>
           <div class="feature__item__text">
-            <h3 class="feature__item__text--header">Warranty Protection</h3>
-            <p class="feature__item__text--description">Over 2 years</p>
+            <h3 class="feature__item__text--header en">Warranty Protection</h3>
+            <h3 class="feature__item__text--header fr hidden">Garantie de Protection</h3>
+            <p class="feature__item__text--description en">Over 2 years</p>
+            <p class="feature__item__text--description fr hidden">Plus de deux ans</p>
           </div>
         </div>
         <div class="feature__item">
@@ -204,8 +235,10 @@
             <img src="./icons/truck.png" alt="shipping icon" />
           </div>
           <div class="feature__item__text">
-            <h3 class="feature__item__text--header">Free shipping</h3>
-            <p class="feature__item__text--description">Order over $150</p>
+            <h3 class="feature__item__text--header en">Free shipping</h3>
+            <h3 class="feature__item__text--header fr hidden">Livraison gratuite</h3>
+            <p class="feature__item__text--description en">Order over $150</p>
+            <p class="feature__item__text--description fr hidden">Commande de plus de $150</p>
           </div>
         </div>
         <div class="feature__item">
@@ -213,9 +246,13 @@
             <img src="./icons/customer-service.png" alt="support icon" />
           </div>
           <div class="feature__item__text">
-            <h3 class="feature__item__text--header">24/7 Support</h3>
-            <p class="feature__item__text--description">
+            <h3 class="feature__item__text--header en">24/7 Support</h3>
+            <h3 class="feature__item__text--header fr hidden">Assistance 24/7</h3>
+            <p class="feature__item__text--description en">
               Dedicated chat Support
+            </p>
+            <p class="feature__item__text--description fr hidden">
+              Assistance par chat dédié
             </p>
           </div>
         </div>
@@ -232,7 +269,8 @@
             </div>
             <div class="main__gallery__info">
               <h2>Slytherine</h2>
-              <p>Stylish Coffee Chair</p>
+              <p class="en">Stylish Coffee Chair</p>
+              <p class="fr hidden">Chaise de café élégante</p>
               <h3>$500.00</h3>
             </div>
             <button class="cart-button">Add to cart</button>
@@ -248,7 +286,8 @@
             </div>
             <div class="main__gallery__info">
               <h2>Leviosa</h2>
-              <p>Stylish Coffee Table</p>
+              <p class="en">Stylish Coffee Table</p>
+              <p class="fr hidden">Table basse élégante</p>
               <h3>$120.00</h3>
             </div>
             <button class="cart-button">Add to cart</button>
@@ -264,7 +303,8 @@
             </div>
             <div class="main__gallery__info">
               <h2>Potty</h2>
-              <p>Minimalist flower pot</p>
+              <p class="en">Minimalist flower pot</p>
+              <p class="fr hidden">Pot de fleurs minimaliste</p>
               <h3>$40.00</h3>
             </div>
             <button class="cart-button">Add to cart</button>
@@ -280,7 +320,8 @@
             </div>
             <div class="main__gallery__info">
               <h2>Muggo</h2>
-              <p>Small mug</p>
+              <p class="en">Small mug</p>
+              <p class="fr hidden">Petite tasse</p>
               <h3>$7.00</h3>
             </div>
             <button class="cart-button">Add to cart</button>
@@ -296,7 +337,8 @@
             </div>
             <div class="main__gallery__info">
               <h2>Grifo</h2>
-              <p>Night lamp</p>
+              <p class="en">Night lamp</p>
+              <p class="fr hidden">Lampe de chevet</p>
               <h3>$50.00</h3>
             </div>
             <button class="cart-button">Add to cart</button>
@@ -312,7 +354,8 @@
             </div>
             <div class="main__gallery__info">
               <h2>Lolito</h2>
-              <p>Luxury large sofa</p>
+              <p class="en">Luxury large sofa</p>
+              <p class="fr hidden">Grand canapé de luxe</p>
               <h3>$700.00</h3>
             </div>
             <button class="cart-button">Add to cart</button>
@@ -328,7 +371,8 @@
             </div>
             <div class="main__gallery__info">
               <h2>Haugsvar</h2>
-              <p>bed set</p>
+              <p class="en">bed set</p>
+              <p class="fr hidden">Ensemble de lit</p>
               <h3>$100.00</h3>
             </div>
             <button class="cart-button">Add to cart</button>
@@ -344,7 +388,8 @@
             </div>
             <div class="main__gallery__info">
               <h2>Respira</h2>
-              <p>Ceiling fan</p>
+              <p class="en">Ceiling fan</p>
+              <p class="fr hidden">Ventilateur plafonnier</p>
               <h3>$100.00</h3>
             </div>
             <button class="cart-button">Add to cart</button>
