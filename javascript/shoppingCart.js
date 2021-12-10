@@ -44,7 +44,7 @@ let products = [
   },
 ];
 
-let carts = document.querySelectorAll(".cart-button");
+let carts = document.querySelectorAll("[data-cart-button]");
 const productContainer = document.querySelector(".product-container");
 const cartCounter = document.querySelector(".cart-counter");
 const cartIcon = document.querySelector(".cart-icon");

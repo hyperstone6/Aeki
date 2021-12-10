@@ -3,7 +3,7 @@ import { moveTargetSlide, updateDots } from "./javascript/carousel.js";
 //close button function
 import { closeButtonFn, keepCosed } from "./javascript/closeButton.js";
 //axios call to unsplash API
-import { callToAPI } from "./javascript/axios.js";
+// import { callToAPI } from "./javascript/axios.js";
 //shopping cart app
 import {
   removeAll,
@@ -19,3 +19,5 @@ import {
 import { zoomFunc } from "./javascript/zoomFeature.js";
 //Toggle between English and French
 import { toggleLang, keepSelectedLang } from "./javascript/toggleLang.js";
+//Trigger page navigation to populate fetched pics
+import { navigateToPage } from "./javascript/navigate.js";

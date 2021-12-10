@@ -5,14 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./icons/favicon.ico" type="image/x-icon" />
-    <title>Furniture Store</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script defer>
-      $(document).ready(function () {
-        $("#footer").load("footer.html");
-      });
-    </script>
+    <title>Aeki Furniture Store</title>
     <script defer type="module" src="./script.js"></script>
     <link rel="stylesheet" href="style.css" />
     <link
@@ -36,71 +29,71 @@
             </div>
             <ul class="nav__list">
               <li class="nav__link">
-                <a class="en" href="/">Products</a>
-                <a class="fr hidden" href="/">Produits</a>
+                <a class="en">Products</a>
+                <a class="fr hidden">Produits</a>
                 <ul class="nav__sub-list">
-                  <li class="nav__sub-link">
-                    <a class="en" data-product href="/">Bedding & Bath</a>
-                    <a class="fr hidden" data-product href="/">Lit & Bain</a>
+                  <li class="nav__sub-link" data-product="Bedding">
+                    <a class="en" href="/">Bedding & Bath</a>
+                    <a class="fr hidden" >Lit & Bain</a>
                   </li>
-                  <li class="nav__sub-link">
-                    <a class="en" data-product href="/">Cabinets</a>
-                    <a class="fr hidden" data-product href="/">Armoires</a>
+                  <li class="nav__sub-link" data-product="Cabinets">
+                    <a class="en" href="/">Cabinets</a>
+                    <a class="fr hidden" >Armoires</a>
                   </li>
-                  <li class="nav__sub-link">
-                    <a class="en" data-product href="/">Chairs & Seating</a>
-                    <a class="fr hidden" data-product href="/">Chaises & Sièges</a>
+                  <li class="nav__sub-link" data-product="Chairs">
+                    <a class="en" href="/">Chairs & Seating</a>
+                    <a class="fr hidden" >Chaises & Sièges</a>
                   </li>
-                  <li class="nav__sub-link">
-                    <a class="en" data-product href="/">Desks & Tables</a>
-                    <a class="fr hidden" data-product href="/">Bureaux & Tables</a>
+                  <li class="nav__sub-link" data-product="Desks">
+                    <a class="en" href="/">Desks & Tables</a>
+                    <a class="fr hidden" >Bureaux & Tables</a>
                   </li>
-                  <li class="nav__sub-link">
-                    <a class="en" data-product href="/">Television Sets</a>
-                    <a class="fr hidden" data-product href="/">Supports de Télévision</a>
+                  <li class="nav__sub-link" data-product="Television Sets">
+                    <a class="en" href="/">Television Sets</a>
+                    <a class="fr hidden" >Supports de Télévision</a>
                   </li>
-                  <li class="nav__sub-link">
-                    <a class="en" data-product href="/">Appliances</a>
-                    <a class="fr hidden" data-product href="/">Électroménagers</a>
+                  <li class="nav__sub-link" data-product="Appliances">
+                    <a class="en" href="/">Appliances</a>
+                    <a class="fr hidden" >Électroménagers</a>
                   </li>
-                  <li class="nav__sub-link">
-                    <a class="en" data-product href="/">Lighting & Decor</a>
-                    <a class="fr hidden" data-product href="/">Éclairage & Décor</a>
+                  <li class="nav__sub-link" data-product="Lighting & Decor">
+                    <a class="en" href="/">Lighting & Decor</a>
+                    <a class="fr hidden" >Éclairage & Décor</a>
                   </li>
                 </ul>
               </li>
 
               <li class="nav__link">
-                <a class="en" href="/">Rooms</a>
-                <a class="fr hidden" href="/">Chambres</a>
+                <a class="en">Rooms</a>
+                <a class="fr hidden">Chambres</a>
                 <ul class="nav__sub-list">
-                  <li class="nav__sub-link">
-                    <a class="en" data-room href="/">Bedroom</a>
-                    <a class="fr hidden" data-room href="/">Chambre à Coucher</a>
+                  <li class="nav__sub-link" data-room="Bedroom">
+                    <a class="en" href="/">Bedroom</a>
+                    <a class="fr hidden">Chambre à Coucher</a>
                   </li>
-                  <li class="nav__sub-link">
-                    <a class="en" data-room href="/">Living Room</a>
-                    <a class="fr hidden" data-room href="/">Salle de Séjour</a>
+                  <li class="nav__sub-link" data-room="Living Room">
+                    <a class="en" href="/">Living Room</a>
+                    <a class="fr hidden">Salle de Séjour</a>
                   </li>
-                  <li class="nav__sub-link">
-                    <a class="en" data-room href="/">Guest Room</a>
-                    <a class="fr hidden" data-room href="/">Chambre d'hôtes</a>
+                  <li class="nav__sub-link" data-room="Guest Room">
+                    <a class="en"  href="/">Guest Room</a>
+                    <a class="fr hidden">Chambre d'hôtes</a>
                   </li>
-                  <li class="nav__sub-link">
-                    <a class="en" data-room href="/">Kitchen</a>
-                    <a class="fr hidden" data-room href="/">Cuisine</a>
+                  <li class="nav__sub-link" data-room="Kitchen">
+                    <a class="en" href="/">Kitchen</a>
+                    <a class="fr hidden">Cuisine</a>
                   </li>
-                  <li class="nav__sub-link">
-                    <a class="en" data-room href="/">Bathroom</a>
-                    <a class="fr hidden" data-room href="/">Salle de Bains</a>
+                  <li class="nav__sub-link" data-room="Bathroom">
+                    <a class="en" href="/">Bathroom</a>
+                    <a class="fr hidden">Salle de Bains</a>
                   </li>
-                  <li class="nav__sub-link">
-                    <a class="en" data-roomhref="/">Patio</a>
-                    <a class="fr hidden" data-roomhref="/">Patio</a>
+                  <li class="nav__sub-link" data-room="Patio">
+                    <a class="en" href="/">Patio</a>
+                    <a class="fr hidden">Patio</a>
                   </li>
-                  <li class="nav__sub-link">
-                    <a class="en" data-room href="/">Exterior</a>
-                    <a class="fr hidden" data-room href="/">Extérieur</a>
+                  <li class="nav__sub-link" data-room="Exterior">
+                    <a class="en" href="/">Exterior</a>
+                    <a class="fr hidden">Extérieur</a>
                   </li>
                 </ul>
               </li>
@@ -108,12 +101,14 @@
             </ul>
           </nav>
 
-          <form action="/" class="search">
-            <button class="search__button">
+          <form class="search">
+            <button class="search__button" data-search-button>
               <img src="./icons/magnify.png" alt="search icon" />
             </button>
             <input
+              id="search-api"
               type="text"
+              data-search-api
               class="search__input"
               placeholder="Example: minimalist chair"
             />
@@ -273,8 +268,10 @@
               <p class="fr hidden">Chaise de café élégante</p>
               <h3>$500.00</h3>
             </div>
-            <button class="cart-button">Add to cart</button>
-            <button class="zoom-button">Zoom In</button>
+            <button class="cart-button en" data-cart-button>Add to cart</button>
+            <button class="cart-button fr hidden" data-cart-button>Ajouter</button>
+            <button class="zoom-button en" data-zoom>Zoom In</button>
+            <button class="zoom-button fr hidden" data-zoom>Zoomer</button>
           </div>
           <div class="main__gallery__overlay">
             <div class="main__gallery__item">
@@ -290,8 +287,10 @@
               <p class="fr hidden">Table basse élégante</p>
               <h3>$120.00</h3>
             </div>
-            <button class="cart-button">Add to cart</button>
-            <button class="zoom-button">Zoom In</button>
+            <button class="cart-button en" data-cart-button>Add to cart</button>
+            <button class="cart-button fr hidden" data-cart-button>Ajouter</button>
+            <button class="zoom-button en" data-zoom>Zoom In</button>
+            <button class="zoom-button fr hidden" data-zoom>Zoomer</button>
           </div>
           <div class="main__gallery__overlay">
             <div class="main__gallery__item">
@@ -307,8 +306,10 @@
               <p class="fr hidden">Pot de fleurs minimaliste</p>
               <h3>$40.00</h3>
             </div>
-            <button class="cart-button">Add to cart</button>
-            <button class="zoom-button">Zoom In</button>
+            <button class="cart-button en" data-cart-button>Add to cart</button>
+            <button class="cart-button fr hidden" data-cart-button>Ajouter</button>
+            <button class="zoom-button en" data-zoom>Zoom In</button>
+            <button class="zoom-button fr hidden" data-zoom>Zoomer</button>
           </div>
           <div class="main__gallery__overlay">
             <div class="main__gallery__item">
@@ -324,8 +325,10 @@
               <p class="fr hidden">Petite tasse</p>
               <h3>$7.00</h3>
             </div>
-            <button class="cart-button">Add to cart</button>
-            <button class="zoom-button">Zoom In</button>
+            <button class="cart-button en" data-cart-button>Add to cart</button>
+            <button class="cart-button fr hidden" data-cart-button>Ajouter</button>
+            <button class="zoom-button en" data-zoom>Zoom In</button>
+            <button class="zoom-button fr hidden" data-zoom>Zoomer</button>
           </div>
           <div class="main__gallery__overlay">
             <div class="main__gallery__item">
@@ -341,8 +344,10 @@
               <p class="fr hidden">Lampe de chevet</p>
               <h3>$50.00</h3>
             </div>
-            <button class="cart-button">Add to cart</button>
-            <button class="zoom-button">Zoom In</button>
+            <button class="cart-button en" data-cart-button>Add to cart</button>
+            <button class="cart-button fr hidden" data-cart-button>Ajouter</button>
+            <button class="zoom-button en" data-zoom>Zoom In</button>
+            <button class="zoom-button fr hidden" data-zoom>Zoomer</button>
           </div>
           <div class="main__gallery__overlay">
             <div class="main__gallery__item">
@@ -358,8 +363,10 @@
               <p class="fr hidden">Grand canapé de luxe</p>
               <h3>$700.00</h3>
             </div>
-            <button class="cart-button">Add to cart</button>
-            <button class="zoom-button">Zoom In</button>
+            <button class="cart-button en" data-cart-button>Add to cart</button>
+            <button class="cart-button fr hidden" data-cart-button>Ajouter</button>
+            <button class="zoom-button en" data-zoom>Zoom In</button>
+            <button class="zoom-button fr hidden" data-zoom>Zoomer</button>
           </div>
           <div class="main__gallery__overlay">
             <div class="main__gallery__item">
@@ -375,8 +382,10 @@
               <p class="fr hidden">Ensemble de lit</p>
               <h3>$100.00</h3>
             </div>
-            <button class="cart-button">Add to cart</button>
-            <button class="zoom-button">Zoom In</button>
+            <button class="cart-button en" data-cart-button>Add to cart</button>
+            <button class="cart-button fr hidden" data-cart-button>Ajouter</button>
+            <button class="zoom-button en" data-zoom>Zoom In</button>
+            <button class="zoom-button fr hidden" data-zoom>Zoomer</button>
           </div>
           <div class="main__gallery__overlay">
             <div class="main__gallery__item">
@@ -392,12 +401,79 @@
               <p class="fr hidden">Ventilateur plafonnier</p>
               <h3>$100.00</h3>
             </div>
-            <button class="cart-button">Add to cart</button>
-            <button class="zoom-button">Zoom In</button>
+            <button class="cart-button en" data-cart-button>Add to cart</button>
+            <button class="cart-button fr hidden" data-cart-button>Ajouter</button>
+            <button class="zoom-button en" data-zoom>Zoom In</button>
+            <button class="zoom-button fr hidden" data-zoom>Zoomer</button>
           </div>
         </div>
       </section>
       <div id="footer"></div>
+      <footer id="footer">
+        <div class="footer__col">
+            <h3 class="footer__header">AEKI.</h3>
+            <p>&copy; 2021 Sayed Mahmood</p>
+            <p>Montreal, Canada</p>
+            <p class="en">This product was created solely by me to showcase my web development capability.</p>
+            <p class="fr hidden">Ce produit a été créé par moi pour mettre en valeur mes capacités de développement web.</p>
+            <p>+1 438 364 5017</p>
+            <p>palebluedot85@gmail.com</p>
+        </div>
+        <div class="footer__col">
+            <h3 class="footer__header en">Menu</h3>
+            <ul class="en">
+                <li>Products</li>
+                <li>Rooms</li>
+                <li>Inspirations</li>
+                <li>About Me</li>
+                <li>Terms & Policy</li>
+            </ul>
+            <h3 class="footer__header fr hidden">Menu</h3>
+            <ul class="fr hidden">
+                <li>Produits</li>
+                <li>Chambres</li>
+                <li>Inspirations</li>
+                <li>A propos de moi</li>
+                <li>Conditions & Politique</li>
+            </ul>
+        </div>
+        <div class="footer__col">
+            <h3 class="footer__header en">Account</h3>
+            <ul class="en">
+                <li>My Account</li>
+                <li>Checkout</li>
+                <li>My Cart</li>
+                <li>About Me</li>
+                <li>My catalog</li>
+            </ul>
+            <h3 class="footer__header fr hidden">Compte</h3>
+            <ul class="fr hidden">
+                <li>Mon compte</li>
+                <li>Checkout</li>
+                <li>Mon panier</li>
+                <li>À propos de moi</li>
+                <li>Mon catalogue</li>
+            </ul>
+        </div>
+        <div class="footer__col">
+            <h3 class="footer__header en">Stay Connected</h3>
+            <ul class="en">
+                <li>Facebook</li>
+                <li>Instagram</li>
+                <li>Twitter</li>
+                <li>LinkedIn</li>
+                <li>Indeed</li>
+            </ul>
+            <h3 class="footer__header fr hidden">Restez connecté</h3>
+            <ul class="fr hidden">
+                <li>Facebook</li>
+                <li>Instagram</li>
+                <li>Twitter</li>
+                <li>LinkedIn</li>
+                <li>Indeed</li>
+            </ul>
+        </div>
+    </footer>
     </div>
   </body>
 </html>
