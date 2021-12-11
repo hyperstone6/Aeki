@@ -91,6 +91,15 @@ body {
   &__list {
     display: flex;
     gap: 2rem;
+
+    .hamburger-btn {
+      display: none;
+
+    }
+
+    .hamburger-icon {
+      
+    }
   }
 
   &__link--2 {
@@ -439,7 +448,6 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 3rem;
-    // position: relative;
 
     &__overlay {
       align-items: center;
@@ -677,9 +685,19 @@ body {
 
   .nav {
     margin-top: 8rem;
-  
-    &__list {
+    position: relative;
+
+    .hamburger-btn {
       display: block;
+      position: absolute;
+      top: -1rem;
+      left: 0;
+      cursor: pointer;
+    }
+
+    &__list {
+      display: none;
+      margin-top: 3rem;
     }
 
     &__link {
