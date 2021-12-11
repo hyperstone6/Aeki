@@ -692,15 +692,8 @@ body {
   }
 
   .search {
-    // padding: 0;
     top: 5rem;
     min-width: 100%;
-    // margin-bottom: 5rem;
-
-
-    &__input {
-      
-    }
   }
 
   .user-nav {
@@ -738,6 +731,15 @@ body {
   .main {
 
     &__gallery {
+
+      &__item {
+
+        & img {
+          min-width: 100vw;
+          object-fit: cover;
+          object-position: top;
+        }
+      }
 
       &__overlay {
         max-width: 100%;

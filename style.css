@@ -532,6 +532,10 @@ body {
         left: 1rem; }
       .carousel__btn--right {
         right: 1rem; }
+  .main__gallery__item img {
+    min-width: 100vw;
+    object-fit: cover;
+    object-position: top; }
   .main__gallery__overlay {
     max-width: 100%; }
   .footer {

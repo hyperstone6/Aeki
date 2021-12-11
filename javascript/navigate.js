@@ -29,5 +29,5 @@ export function navigateToPage(e) {
     }
         
     localStorage.setItem('findThis', searchTerm)
-    window.location.href = 'http://127.0.0.1:5500/gallery.html'
+    window.location.href = window.location.href + 'gallery.html'
 }
