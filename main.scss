@@ -599,29 +599,36 @@ body {
   cursor: pointer;
 }
 
-#footer {
+.footer {
   display: flex;
-  margin: 3rem 0;
+  margin: 3rem 1rem;
   justify-content: flex-start;
-  color: #e89f71;
+  background-color: #f9f1e7;
 }
 
 .footer__col {
   flex-grow: 0;
-  flex-basis: 15%;
   line-height: 1.7;
+  padding: 1rem;
+  flex-basis: 15%;
   margin-right: 5rem;
 
   & h3 {
     font-size: 2rem;
     margin-bottom: 2rem;
+
   }
 
   & p,
   li {
     font-size: 1.5rem;
+
   }
 }
+
+// .footer__col:not(:last-child) {
+  
+// }
 
 @media only screen and (max-width: 900px) {
   .header__top-content {
@@ -645,7 +652,7 @@ body {
   }
 }
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:600px) {
   .wrapper {
     width: 100%;
   }
@@ -735,6 +742,13 @@ body {
       &__overlay {
         max-width: 100%;
       }
+    }
+  }
+  .footer {
+    display: block;
+
+    &__col {
+      display: block;
     }
   }
 }

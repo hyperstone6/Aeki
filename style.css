@@ -453,16 +453,17 @@ body {
   color: white;
   cursor: pointer; }
 
-#footer {
+.footer {
   display: flex;
-  margin: 3rem 0;
+  margin: 3rem 1rem;
   justify-content: flex-start;
-  color: #e89f71; }
+  background-color: #f9f1e7; }
 
 .footer__col {
   flex-grow: 0;
-  flex-basis: 15%;
   line-height: 1.7;
+  padding: 1rem;
+  flex-basis: 15%;
   margin-right: 5rem; }
   .footer__col h3 {
     font-size: 2rem;
@@ -484,7 +485,7 @@ body {
     .feature__item {
       margin: 1rem 5rem; } }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
   .wrapper {
     width: 100%; }
   .header__top-content {
@@ -532,7 +533,11 @@ body {
       .carousel__btn--right {
         right: 1rem; }
   .main__gallery__overlay {
-    max-width: 100%; } }
+    max-width: 100%; }
+  .footer {
+    display: block; }
+    .footer__col {
+      display: block; } }
 
 .hidden {
   display: none; }
