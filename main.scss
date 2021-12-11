@@ -78,7 +78,7 @@ body {
 
 .logo {
   & img {
-    height: 1.5em;
+    height: 3em;
   }
 }
 
@@ -223,7 +223,7 @@ body {
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  gap: .5rem;
+  gap: 0.5rem;
   border: 1px solid #e89f71;
 }
 
@@ -233,15 +233,15 @@ body {
 }
 
 .clear-cart {
-  padding: .5em 1em;
+  padding: 0.5em 1em;
 }
 
 .checkout {
-  padding: .5em 1em;
+  padding: 0.5em 1em;
 }
 
 .cart-btns {
-  padding: .4rem .5rem;
+  padding: 0.4rem 0.5rem;
   margin: 0 1rem;
 }
 
@@ -398,7 +398,6 @@ body {
     max-height: 100%;
     position: absolute;
     object-fit: contain;
-    
   }
 }
 
@@ -542,21 +541,21 @@ body {
 
 .zoom-button {
   position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, 20%);
-        background-color: #898989;
-        font-family: "gilroy-light";
-        font-size: 1.5rem;
-        color: white;
-        cursor: pointer;
-        z-index: 1;
-        border: none;
-        width: 50%;
-        height: 3.5em;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 500ms;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+  background-color: #898989;
+  font-family: "gilroy-light";
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  z-index: 1;
+  border: none;
+  width: 50%;
+  height: 3.5em;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 500ms;
 }
 
 .gallery-modal {
@@ -582,19 +581,19 @@ body {
   position: relative;
   z-index: 112;
   background-image: url();
-  background-size:contain;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position:center;
+  background-position: center;
 }
 
 .close-modal {
-  position:absolute;
+  position: absolute;
   top: 1rem;
   right: 3rem;
   z-index: 120;
   border: none;
   background-color: #3a3a3a;
-  padding: .1em .4em;
+  padding: 0.1em 0.4em;
   font-size: 2rem;
   color: white;
   cursor: pointer;
@@ -642,6 +641,100 @@ body {
     justify-content: space-between;
     &__item {
       margin: 1rem 5rem;
+    }
+  }
+}
+
+@media only screen and (max-width:500px) {
+  .wrapper {
+    width: 100%;
+  }
+  .header {
+  // height: 40rem;
+
+    &__top-content {
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-start;
+      padding: 2rem 1rem;
+        #a{order:2;}
+        #b{order:1;}
+        flex-direction: column;
+        align-items: flex-start;
+  }
+
+  .logo-box {
+    position: relative;
+    z-index: 1;
+  }
+
+  .nav {
+    margin-top: 8rem;
+  
+    &__list {
+      display: block;
+    }
+
+    &__link {
+      margin-bottom: 2rem;
+    }
+    &__link::after {
+      content: none;
+    }
+
+  }
+
+  .search {
+    // padding: 0;
+    top: 5rem;
+    min-width: 100%;
+    // margin-bottom: 5rem;
+
+
+    &__input {
+      
+    }
+  }
+
+  .user-nav {
+    position:absolute;
+    right: 2rem;
+  }
+}
+
+  .carousel {
+    position: relative;
+    &__nav {
+      &__buttons {
+        position: absolute;
+        bottom: 1.2rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    &__btn {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      transform: translateY(-60%);
+
+      &--left {
+        left: 1rem;
+      }
+
+      &--right {
+        right: 1rem;
+      }
+    }
+  }
+
+  .main {
+
+    &__gallery {
+
+      &__overlay {
+        max-width: 100%;
+      }
     }
   }
 }

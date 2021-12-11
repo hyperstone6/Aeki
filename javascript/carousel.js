@@ -60,7 +60,6 @@ navButtons.addEventListener('click', e => {
     const currentSlide = track.querySelector('.current__img')
     const currentDot = navButtons.querySelector('.carousel__nav__btn--current')
     const targetIndex = dots.findIndex(dot => dot === targetDot)
-
     const targetSlide = slides[targetIndex]
 
     moveTargetSlide(track, currentSlide, targetSlide);

@@ -21,12 +21,12 @@
     <div class="wrapper">
       <header class="header">
         <div class="header__top-content">
-          <nav class="nav">
-            <div class="logo-box">
-              <a href="#" class="logo"
-                ><img src="./icons/logo.png" alt="logo image"
-              /></a>
-            </div>
+          <div class="logo-box">
+            <a href="#" class="logo"
+              ><img src="./icons/logo.png" alt="logo image"
+            /></a>
+          </div>
+          <nav class="nav" id="a">
             <ul class="nav__list">
               <li class="nav__link">
                 <a class="en">Products</a>
@@ -101,7 +101,7 @@
             </ul>
           </nav>
 
-          <form class="search">
+          <form class="search" id="b">
             <button class="search__button" data-search-button>
               <img src="./icons/magnify.png" alt="search icon" />
             </button>
@@ -137,7 +137,7 @@
             </div>
           </div>
         </div>
-        <div class="hero" onload="console.log('lol')">
+        <div class="hero">
           <button class="hero__close" id="1">X</button>
           <h1 class="hero__header en">High-Quality Furniture Just For You</h1>
           <h1 class="hero__header fr hidden">
@@ -268,10 +268,8 @@
               <p class="fr hidden">Chaise de café élégante</p>
               <h3>$500.00</h3>
             </div>
-            <button class="cart-button en" data-cart-button>Add to cart</button>
-            <button class="cart-button fr hidden" data-cart-button>Ajouter</button>
-            <button class="zoom-button en" data-zoom>Zoom In</button>
-            <button class="zoom-button fr hidden" data-zoom>Zoomer</button>
+            <button class="cart-button" data-cart-button>Add to cart</button>
+            <button class="zoom-button" data-zoom>Zoom In</button>
           </div>
           <div class="main__gallery__overlay">
             <div class="main__gallery__item">
@@ -287,10 +285,8 @@
               <p class="fr hidden">Table basse élégante</p>
               <h3>$120.00</h3>
             </div>
-            <button class="cart-button en" data-cart-button>Add to cart</button>
-            <button class="cart-button fr hidden" data-cart-button>Ajouter</button>
-            <button class="zoom-button en" data-zoom>Zoom In</button>
-            <button class="zoom-button fr hidden" data-zoom>Zoomer</button>
+            <button class="cart-button" data-cart-button>Add to cart</button>
+            <button class="zoom-button" data-zoom>Zoom In</button>
           </div>
           <div class="main__gallery__overlay">
             <div class="main__gallery__item">
@@ -306,10 +302,8 @@
               <p class="fr hidden">Pot de fleurs minimaliste</p>
               <h3>$40.00</h3>
             </div>
-            <button class="cart-button en" data-cart-button>Add to cart</button>
-            <button class="cart-button fr hidden" data-cart-button>Ajouter</button>
-            <button class="zoom-button en" data-zoom>Zoom In</button>
-            <button class="zoom-button fr hidden" data-zoom>Zoomer</button>
+            <button class="cart-button" data-cart-button>Add to cart</button>
+            <button class="zoom-button" data-zoom>Zoom In</button>
           </div>
           <div class="main__gallery__overlay">
             <div class="main__gallery__item">
@@ -325,10 +319,8 @@
               <p class="fr hidden">Petite tasse</p>
               <h3>$7.00</h3>
             </div>
-            <button class="cart-button en" data-cart-button>Add to cart</button>
-            <button class="cart-button fr hidden" data-cart-button>Ajouter</button>
-            <button class="zoom-button en" data-zoom>Zoom In</button>
-            <button class="zoom-button fr hidden" data-zoom>Zoomer</button>
+            <button class="cart-button" data-cart-button>Add to cart</button>
+            <button class="zoom-button" data-zoom>Zoom In</button>
           </div>
           <div class="main__gallery__overlay">
             <div class="main__gallery__item">
@@ -340,14 +332,12 @@
             </div>
             <div class="main__gallery__info">
               <h2>Grifo</h2>
-              <p class="en">Night lamp</p>
+              <p class="en">Night Lamp</p>
               <p class="fr hidden">Lampe de chevet</p>
               <h3>$50.00</h3>
             </div>
-            <button class="cart-button en" data-cart-button>Add to cart</button>
-            <button class="cart-button fr hidden" data-cart-button>Ajouter</button>
-            <button class="zoom-button en" data-zoom>Zoom In</button>
-            <button class="zoom-button fr hidden" data-zoom>Zoomer</button>
+            <button class="cart-button" data-cart-button>Add to cart</button>
+            <button class="zoom-button" data-zoom>Zoom In</button>
           </div>
           <div class="main__gallery__overlay">
             <div class="main__gallery__item">
@@ -363,10 +353,8 @@
               <p class="fr hidden">Grand canapé de luxe</p>
               <h3>$700.00</h3>
             </div>
-            <button class="cart-button en" data-cart-button>Add to cart</button>
-            <button class="cart-button fr hidden" data-cart-button>Ajouter</button>
-            <button class="zoom-button en" data-zoom>Zoom In</button>
-            <button class="zoom-button fr hidden" data-zoom>Zoomer</button>
+            <button class="cart-button" data-cart-button>Add to cart</button>
+            <button class="zoom-button" data-zoom>Zoom In</button>
           </div>
           <div class="main__gallery__overlay">
             <div class="main__gallery__item">
@@ -382,10 +370,8 @@
               <p class="fr hidden">Ensemble de lit</p>
               <h3>$100.00</h3>
             </div>
-            <button class="cart-button en" data-cart-button>Add to cart</button>
-            <button class="cart-button fr hidden" data-cart-button>Ajouter</button>
-            <button class="zoom-button en" data-zoom>Zoom In</button>
-            <button class="zoom-button fr hidden" data-zoom>Zoomer</button>
+            <button class="cart-button" data-cart-button>Add to cart</button>
+            <button class="zoom-button" data-zoom>Zoom In</button>
           </div>
           <div class="main__gallery__overlay">
             <div class="main__gallery__item">
@@ -401,10 +387,8 @@
               <p class="fr hidden">Ventilateur plafonnier</p>
               <h3>$100.00</h3>
             </div>
-            <button class="cart-button en" data-cart-button>Add to cart</button>
-            <button class="cart-button fr hidden" data-cart-button>Ajouter</button>
-            <button class="zoom-button en" data-zoom>Zoom In</button>
-            <button class="zoom-button fr hidden" data-zoom>Zoomer</button>
+            <button class="cart-button" data-cart-button>Add to cart</button>
+            <button class="zoom-button" data-zoom>Zoom In</button>
           </div>
         </div>
       </section>

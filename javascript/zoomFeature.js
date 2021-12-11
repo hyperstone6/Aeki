@@ -1,4 +1,4 @@
-let zoomBtn = document.querySelectorAll('[data-zoom')
+let zoomBtn = document.querySelectorAll('[data-zoom]')
 let imgContainer = document.querySelector('.modal-img-container')
 let modalWindow = document.querySelector('.gallery-modal')
 
