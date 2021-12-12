@@ -18,7 +18,7 @@ html {
 body {
   font-family: "Gilroy-Light"; }
 
-.button {
+.button, button {
   background-color: #e89f71;
   color: white;
   border: none;
@@ -70,9 +70,11 @@ body {
     gap: 2rem; }
     .nav__list .hamburger-btn svg {
       display: none;
-      visibility: hidden; }
+      background-color: transparent;
+      border: none; }
   .nav__link--2 {
-    padding-right: 1rem; }
+    padding-right: 1rem;
+    cursor: pointer; }
   .nav__link::after {
     content: "";
     border: solid #3a3a3a;
@@ -172,7 +174,6 @@ body {
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  gap: 0.5rem;
   border: 1px solid #e89f71; }
 
 .product img {
@@ -479,21 +480,25 @@ body {
 .footer {
   display: flex;
   margin: 3rem 1rem;
-  justify-content: flex-start;
+  justify-content: space-around;
   background-color: #f9f1e7; }
 
 .footer__col {
-  flex-grow: 0;
   line-height: 1.7;
-  padding: 1rem;
-  flex-basis: 15%;
-  margin-right: 5rem; }
+  padding: 1rem; }
   .footer__col h3 {
     font-size: 2rem;
     margin-bottom: 2rem; }
   .footer__col p,
   .footer__col li {
     font-size: 1.5rem; }
+
+.next__text {
+  text-align: left; }
+
+.next__reactjs {
+  height: 15rem;
+  margin: 1.2rem 0; }
 
 @media only screen and (max-width: 900px) {
   .header__top-content {
@@ -510,7 +515,7 @@ body {
     .feature__item {
       margin: 1rem 5rem; } }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 730px) {
   .wrapper {
     width: 100%; }
   .header__top-content {
@@ -524,6 +529,11 @@ body {
       order: 2; }
     .header__top-content #b {
       order: 1; }
+  .header .cart-contents {
+    width: auto;
+    font-size: 1.5rem; }
+  .header .clear-cart, .header .checkout {
+    font-size: 1.2rem; }
   .header .logo-box {
     position: relative;
     z-index: 1; }

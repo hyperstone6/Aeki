@@ -22,7 +22,7 @@ body {
   font-family: "Gilroy-Light";
 }
 
-.button {
+.button, button {
   background-color: #e89f71;
   color: white;
   border: none;
@@ -94,14 +94,15 @@ body {
 
     .hamburger-btn svg {
       display: none;
-      visibility: hidden;
-
+      background-color: transparent;
+      border: none;
     }
 
   }
 
   &__link--2 {
     padding-right: 1rem;
+    cursor: pointer;
   }
 
   //Down arrow pseudo-element
@@ -237,7 +238,6 @@ body {
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  gap: 0.5rem;
   border: 1px solid #e89f71;
 }
 
@@ -631,16 +631,13 @@ body {
 .footer {
   display: flex;
   margin: 3rem 1rem;
-  justify-content: flex-start;
+  justify-content: space-around;
   background-color: #f9f1e7;
 }
 
 .footer__col {
-  flex-grow: 0;
   line-height: 1.7;
   padding: 1rem;
-  flex-basis: 15%;
-  margin-right: 5rem;
 
   & h3 {
     font-size: 2rem;
@@ -652,6 +649,18 @@ body {
   li {
     font-size: 1.5rem;
 
+  }
+}
+
+.next {
+
+  &__text {
+    text-align: left;
+  }
+
+  &__reactjs {
+    height: 15rem;
+    margin: 1.2rem 0;
   }
 }
 
@@ -681,12 +690,11 @@ body {
   }
 }
 
-@media only screen and (max-width:600px) {
+@media only screen and (max-width:730px) {
   .wrapper {
     width: 100%;
   }
   .header {
-  // height: 40rem;
 
     &__top-content {
       display: flex;
@@ -697,6 +705,15 @@ body {
         #b{order:1;}
         flex-direction: column;
         align-items: flex-start;
+  }
+
+  .cart-contents {
+    width: auto;
+    font-size: 1.5rem;
+  }
+
+  .clear-cart, .checkout {
+    font-size: 1.2rem;
   }
 
   .logo-box {

@@ -3,19 +3,19 @@ const roomsBtn = document.querySelectorAll("[data-room]")
 const inputField = document.querySelector('[data-search-api]')
 const searchForm = document.querySelector('.search')
 const inputBtn = document.querySelector('[data-search-button]')
+const inspirations = document.querySelector('[data-houses]')
 
 let searchTerm = ''
 
 roomsBtn.forEach(btn => {
     btn.addEventListener('click', navigateToPage)
 })
-
 productsBtn.forEach((btn) => {
-  btn.addEventListener("click", navigateToPage);
+  btn.addEventListener('click', navigateToPage);
 })
 
+inspirations.addEventListener('click', navigateToPage)
 searchForm.addEventListener('submit', navigateToPage)
-
 inputBtn.addEventListener('submit', navigateToPage)
 
 export function navigateToPage(e) {
@@ -24,7 +24,9 @@ export function navigateToPage(e) {
         searchTerm = e.target.dataset.product
     } else if(e.target.dataset.room) {
         searchTerm = e.target.dataset.room
-    } else if(e.target.value != "") {
+    } else if (e.target.dataset.houses) {
+        searchTerm = e.target.dataset.houses
+    } else if (e.target.value != "") {
         searchTerm = inputField.value
     }
         
