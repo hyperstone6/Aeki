@@ -6,8 +6,10 @@ zoomBtn.forEach(btn => {
     btn.addEventListener('click', zoomFunc)
 })
 
-export function zoomFunc(e) {
+function zoomFunc(e) {
     let zoomImg  = e.target.parentElement.children[0].children[0].src
     imgContainer.style.backgroundImage = `url(${zoomImg})`
     modalWindow.style.display = "block"
 }
+
+export { zoomFunc }

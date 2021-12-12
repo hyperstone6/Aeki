@@ -68,8 +68,9 @@ body {
   .nav__list {
     display: flex;
     gap: 2rem; }
-    .nav__list .hamburger-btn {
-      display: none; }
+    .nav__list .hamburger-btn svg {
+      display: none;
+      visibility: hidden; }
   .nav__link--2 {
     padding-right: 1rem; }
   .nav__link::after {
@@ -158,6 +159,13 @@ body {
 
 .lang-change:hover {
   cursor: pointer; }
+
+.main-video {
+  width: auto;
+  height: auto;
+  opacity: .4;
+  object-fit: cover;
+  object-position: bottom; }
 
 .product {
   display: flex;
@@ -399,6 +407,19 @@ body {
       padding-top: 0.5em;
       font-size: 1.8rem; }
 
+.main__secondary-page {
+  margin-top: 5rem; }
+
+.gallery-slogan {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  font-size: 6rem; }
+
+.hamburger-btn {
+  display: none; }
+
 .zoom-button {
   position: absolute;
   top: 50%;
@@ -482,6 +503,8 @@ body {
   .search {
     min-width: 40%;
     max-width: 63%; }
+  .gallery-slogan {
+    font-size: 4.5rem; }
   .feature {
     justify-content: space-between; }
     .feature__item {
@@ -507,12 +530,11 @@ body {
   .header .nav {
     margin-top: 8rem;
     position: relative; }
-    .header .nav .hamburger-btn {
+    .header .nav .hamburger-icon {
       display: block;
+      cursor: pointer;
       position: absolute;
-      top: -1rem;
-      left: 0;
-      cursor: pointer; }
+      top: 0; }
     .header .nav__list {
       display: none;
       margin-top: 3rem; }
@@ -523,6 +545,8 @@ body {
   .header .search {
     top: 5rem;
     min-width: 100%; }
+  .header .hamburger-btn {
+    display: block; }
   .header .user-nav {
     position: absolute;
     right: 2rem; }
@@ -542,6 +566,8 @@ body {
         left: 1rem; }
       .carousel__btn--right {
         right: 1rem; }
+  .gallery-slogan {
+    font-size: 3rem; }
   .main__gallery__item img {
     min-width: 100vw;
     object-fit: cover;

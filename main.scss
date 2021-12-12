@@ -92,14 +92,12 @@ body {
     display: flex;
     gap: 2rem;
 
-    .hamburger-btn {
+    .hamburger-btn svg {
       display: none;
+      visibility: hidden;
 
     }
 
-    .hamburger-icon {
-      
-    }
   }
 
   &__link--2 {
@@ -118,7 +116,6 @@ body {
 
   //Dropdown menu
   &__sub-list {
-    // display: none;
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.5s linear;
@@ -225,6 +222,14 @@ body {
 
 .lang-change:hover {
   cursor: pointer;
+}
+
+.main-video {
+  width: auto;
+  height: auto;
+  opacity: .4;
+  object-fit: cover;
+  object-position: bottom;
 }
 
 .product {
@@ -547,6 +552,22 @@ body {
   }
 }
 
+.main__secondary-page {
+  margin-top: 5rem;
+}
+
+.gallery-slogan {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -80%);
+  font-size: 6rem;
+}
+
+.hamburger-btn {
+  display: none;
+}
+
 .zoom-button {
   position: absolute;
   top: 50%;
@@ -634,10 +655,6 @@ body {
   }
 }
 
-// .footer__col:not(:last-child) {
-  
-// }
-
 @media only screen and (max-width: 900px) {
   .header__top-content {
     flex-wrap: wrap;
@@ -650,6 +667,10 @@ body {
   .search {
     min-width: 40%;
     max-width: 63%;
+  }
+
+  .gallery-slogan {
+    font-size: 4.5rem;
   }
 
   .feature {
@@ -687,12 +708,11 @@ body {
     margin-top: 8rem;
     position: relative;
 
-    .hamburger-btn {
+    .hamburger-icon {
       display: block;
-      position: absolute;
-      top: -1rem;
-      left: 0;
       cursor: pointer;
+      position: absolute;
+      top: 0;
     }
 
     &__list {
@@ -712,6 +732,10 @@ body {
   .search {
     top: 5rem;
     min-width: 100%;
+  }
+
+  .hamburger-btn {
+    display: block;
   }
 
   .user-nav {
@@ -746,6 +770,9 @@ body {
     }
   }
 
+ .gallery-slogan {
+    font-size: 3rem;
+  }
   .main {
 
     &__gallery {
@@ -758,7 +785,6 @@ body {
           object-position: top;
         }
       }
-
       &__overlay {
         max-width: 100%;
       }

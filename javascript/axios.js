@@ -10,9 +10,9 @@ const callToAPI = async (searchTerm) => {
     },
   });
   imgData = response.data.results.map((img) => {
-    let mainGallery = document.querySelector('.main__gallery');
-    let galleryOverlay = document.createElement('div')
-    galleryOverlay.classList.add("main__gallery__overlay")
+    let mainGallery = document.querySelector(".main__gallery");
+    let galleryOverlay = document.createElement("div");
+    galleryOverlay.classList.add("main__gallery__overlay");
     let renderGallery = `
         <div class="main__gallery__item">
           <img
@@ -22,10 +22,27 @@ const callToAPI = async (searchTerm) => {
           />
         </div>
         <button class="zoom-button en" data-zoom>Zoom In</button>
-        <button class="zoom-button fr hidden" data-zoom>Zoomer</button>
     `;
-    galleryOverlay.innerHTML = renderGallery
-    mainGallery.appendChild(galleryOverlay)
+    galleryOverlay.innerHTML = renderGallery;
+    mainGallery.appendChild(galleryOverlay);
+  });
+  let zoomBtn = document.querySelectorAll("[data-zoom]");
+  let imgContainer = document.querySelector(".modal-img-container");
+  let modalWindow = document.querySelector(".gallery-modal");
+  let closeModalBtn = document.querySelector(".close-modal");
+
+  for (let btn of zoomBtn) {
+    btn.addEventListener("click", zoomFunc);
+  }
+
+  function zoomFunc(e) {
+    let zoomImg = e.target.parentElement.children[0].children[0].src;
+    imgContainer.style.backgroundImage = `url(${zoomImg})`;
+    modalWindow.style.display = "block";
+  }
+
+  closeModalBtn.addEventListener("click", () => {
+    modalWindow.style.display = "none";
   });
 };
 

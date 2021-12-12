@@ -15,7 +15,7 @@ import {
   deleteButtons,
   qtyModify,
 } from "./javascript/shoppingCart.js";
-//Zoom function
+// Zoom function
 import { zoomFunc } from "./javascript/zoomFeature.js";
 //Toggle between English and French
 import { toggleLang, keepSelectedLang } from "./javascript/toggleLang.js";

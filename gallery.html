@@ -11,18 +11,20 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
+      
+    </script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script defer src="./javascript/axios.js"></script>
+    <script  src="./javascript/axios.js"></script>
   </head>
   <body>
     <div class="gallery-modal">
       <div class="modal-img-container"></div>
-      <button class="close-modal" id="2">X</button>
+      <button class="close-modal">X</button>
     </div>
     <div class="wrapper">
       <header class="header">
         <div class="header__top-content">
-          <nav class="nav">
+          <nav>
             <div class="logo-box">
               <a href="#" class="logo"
                 ><img src="./icons/logo.png" alt="logo image"
@@ -30,74 +32,85 @@
             </div>
           </nav>
         </div>
+        <div class="carousel">
+          <video class="main-video" autoplay muted loop>
+            <source src="./media/house.mp4" type="video/mp4" />
+          </video>
+          <h1 class="gallery-slogan">Build your dream home&trade;</h1>
+        </div>
       </header>
-        <section class="main">
-          <div class="main__gallery"></div>
-        </section>
-        <footer id="footer">
-          <div class="footer__col">
-              <h3 class="footer__header">AEKI.</h3>
-              <p>&copy; 2021 Sayed Mahmood</p>
-              <p>Montreal, Canada</p>
-              <p class="en">This product was created solely by me to showcase my web development capability.</p>
-              <p class="fr hidden">Ce produit a été créé par moi pour mettre en valeur mes capacités de développement web.</p>
-              <p>+1 438 364 5017</p>
-              <p>palebluedot85@gmail.com</p>
-          </div>
-          <div class="footer__col">
-              <h3 class="footer__header en">Menu</h3>
-              <ul class="en">
-                  <li>Products</li>
-                  <li>Rooms</li>
-                  <li>Inspirations</li>
-                  <li>About Me</li>
-                  <li>Terms & Policy</li>
-              </ul>
-              <h3 class="footer__header fr hidden">Menu</h3>
-              <ul class="fr hidden">
-                  <li>Produits</li>
-                  <li>Chambres</li>
-                  <li>Inspirations</li>
-                  <li>A propos de moi</li>
-                  <li>Conditions & Politique</li>
-              </ul>
-          </div>
-          <div class="footer__col">
-              <h3 class="footer__header en">Account</h3>
-              <ul class="en">
-                  <li>My Account</li>
-                  <li>Checkout</li>
-                  <li>My Cart</li>
-                  <li>About Me</li>
-                  <li>My catalog</li>
-              </ul>
-              <h3 class="footer__header fr hidden">Compte</h3>
-              <ul class="fr hidden">
-                  <li>Mon compte</li>
-                  <li>Checkout</li>
-                  <li>Mon panier</li>
-                  <li>À propos de moi</li>
-                  <li>Mon catalogue</li>
-              </ul>
-          </div>
-          <div class="footer__col">
-              <h3 class="footer__header en">Stay Connected</h3>
-              <ul class="en">
-                  <li>Facebook</li>
-                  <li>Instagram</li>
-                  <li>Twitter</li>
-                  <li>LinkedIn</li>
-                  <li>Indeed</li>
-              </ul>
-              <h3 class="footer__header fr hidden">Restez connecté</h3>
-              <ul class="fr hidden">
-                  <li>Facebook</li>
-                  <li>Instagram</li>
-                  <li>Twitter</li>
-                  <li>LinkedIn</li>
-                  <li>Indeed</li>
-              </ul>
-          </div>
+      <section class="main__secondary-page">
+        <div class="main__gallery"></div>
+      </section>
+      <footer class="footer">
+        <div class="footer__col">
+          <h3 class="footer__header en">Menu</h3>
+          <ul class="en">
+            <li>Products</li>
+            <li>Rooms</li>
+            <li>Inspirations</li>
+            <li>About Me</li>
+            <li>Terms & Policy</li>
+          </ul>
+          <h3 class="footer__header fr hidden">Menu</h3>
+          <ul class="fr hidden">
+            <li>Produits</li>
+            <li>Chambres</li>
+            <li>Inspirations</li>
+            <li>A propos de moi</li>
+            <li>Conditions & Politique</li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__header en">Account</h3>
+          <ul class="en">
+            <li>My Account</li>
+            <li>Checkout</li>
+            <li>My Cart</li>
+            <li>About Me</li>
+            <li>My catalog</li>
+          </ul>
+          <h3 class="footer__header fr hidden">Compte</h3>
+          <ul class="fr hidden">
+            <li>Mon compte</li>
+            <li>Checkout</li>
+            <li>Mon panier</li>
+            <li>À propos de moi</li>
+            <li>Mon catalogue</li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__header en">Connect</h3>
+          <ul class="en">
+            <li>Facebook</li>
+            <li>Instagram</li>
+            <li>Twitter</li>
+            <li>LinkedIn</li>
+            <li>Indeed</li>
+          </ul>
+          <h3 class="footer__header fr hidden">connectez</h3>
+          <ul class="fr hidden">
+            <li>Facebook</li>
+            <li>Instagram</li>
+            <li>Twitter</li>
+            <li>LinkedIn</li>
+            <li>Indeed</li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__header">AEKI.</h3>
+          <p>&copy; 2021 Sayed Mahmood</p>
+          <p>Montreal, Canada</p>
+          <p class="en">
+            This product was created solely by me to showcase my web development
+            capability.
+          </p>
+          <p class="fr hidden">
+            Ce produit a été créé par moi pour mettre en valeur mes capacités de
+            développement web.
+          </p>
+          <p>palebluedot85@gmail.com</p>
+        </div>
       </footer>
     </div>
   </body>
