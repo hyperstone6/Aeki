@@ -4,8 +4,8 @@ Aeki furniture store demo site.
 
 https://sayed-aeki.netlify.app/
 
-![alt text](https://github.com/hyperstone6/Aeki/blob/main/desktop-screenshot.png?raw=true)
 ![alt text](https://github.com/hyperstone6/Aeki/blob/main/mobile-screenshot.png?raw=true)
+![alt text](https://github.com/hyperstone6/Aeki/blob/main/desktop-screenshot.png?raw=true)
 
 The following features are implemented:
 
