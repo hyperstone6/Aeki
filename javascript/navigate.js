@@ -26,10 +26,11 @@ export function navigateToPage(e) {
         searchTerm = e.target.dataset.room
     } else if (e.target.dataset.houses) {
         searchTerm = e.target.dataset.houses
-    } else if (e.target.value != "") {
+    } else {
         searchTerm = inputField.value
+        inputField.value = ""
     }
-        
+    
     localStorage.setItem('findThis', searchTerm)
-    window.location.href = window.location.href + 'gallery.html'
+    window.location.href = "https://sayed-aeki.netlify.app/gallery.html"
 }
