@@ -14,8 +14,8 @@ The following features are implemented:
 
 ## Saving user selection
 -Browser's localStorage and sessionStorage are used to simulate a backend (remembering user's choice).
-Carousel
 
+## Carousel
 -Clicking on the carousel buttons or the carousel indicator dots navigates to different images within the carousel (total of 4 images).
 
 ## Navigation and dropdown menu
