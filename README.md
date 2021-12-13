@@ -9,7 +9,7 @@ https://sayed-aeki.netlify.app/
 
 The following features are implemented:
 
-## Name and responsiveness
+### Name and responsiveness
 -The name is a wordplay on Ikea spelled backwards. I tried my best to avoid using absolute units in CSS to improve responsiveness, however CSS media queries were added for the following break-points: 900px 730px (works all the way down to mobile devices. At this breakpoint navigation menu shrinks inside a "hamburger" button). JavaScript media query is also used whenever I deemed necessary.
 
 ## Saving user selection
