@@ -32,5 +32,5 @@ export function navigateToPage(e) {
     }
     
     localStorage.setItem('findThis', searchTerm)
-    window.location.href = "https://sayed-aeki.netlify.app/gallery.html"
+    window.location.href = "https://adrian-aeki.vercel.app/gallery.html"
 }

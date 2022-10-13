@@ -37,7 +37,6 @@ export function toggleNavList() {
 }
 
 mediaQuery.addEventListener('change', (e)=> {
-  console.log()
   if(e.target.matches) {
     navList.style.display = "flex"
   } else {
