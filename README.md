@@ -2,7 +2,7 @@
 
 Aeki furniture store demo site.
 
-https://adrian-aeki.vercel.app/
+https://adrian-aeki.vercel.app
 
 ![alt text](https://github.com/hyperstone6/Aeki/blob/main/mobile-screenshot.png?raw=true) ![alt text](https://github.com/hyperstone6/Aeki/blob/main/desktop-screenshot.png?raw=true)
 
